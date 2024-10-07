@@ -51,8 +51,9 @@ def plot_histogram(pot_sizes: list,
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
     )
-    
+
     fig.write_html('outputs/mc-histogram.html', auto_open=False)
+    fig.write_image('outputs/mc-histogram.png')
 
 
 def plot_yearly_percentiles(inputs, df):
@@ -249,18 +250,6 @@ def plot_yearly_percentiles(inputs, df):
                        showarrow=False,
                        yshift=10)
     
-    fig.add_annotation(x=.99,
-                       xref='paper',
-                       xanchor='right',
-                       y=0,
-                       yanchor='bottom',
-                       text="<b>shedloadofcode.com</b>",
-                       font=dict(
-                            color="gray",
-                            size=14
-                       ),
-                       showarrow=False)
-    
     fig.add_annotation(x=0.01,
                        xref='paper',
                        yref='paper',
@@ -322,3 +311,4 @@ def plot_yearly_percentiles(inputs, df):
     )
     
     fig.write_html('outputs/mc-percentiles.html', auto_open=False)
+    fig.write_image('outputs/mc-percentiles.png')
