@@ -36,7 +36,7 @@ def func(i):
     return np.sin(xs[i]) ** 2
 
 mse_values = []
-num_samples = []x
+num_samples = []
 data = []
 for n in range(1, 6):
     num_samples.append(n)
